@@ -1,7 +1,7 @@
 import React from "react";
 import "../../styles/style-project.css";
 import { motion } from "framer-motion";
-import { IoLogoHtml5, IoLogoCss3, IoLogoJavascript } from "react-icons/io";
+import { IoLogoHtml5, IoLogoCss3, IoLogoJavascript, IoLogoReact } from "react-icons/io";
 import { RiReactjsFill } from "react-icons/ri";
 
 const Project = () => {
