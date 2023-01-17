@@ -1,0 +1,31 @@
+h1 {
+  text-align: center;
+  margin-top: 1.4em;
+}
+
+.skills-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 4em;
+  flex-wrap: wrap;
+  margin: 0.5em;
+}
+
+.skills-detail {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 1.5em;
+  gap: 0.5em;
+}
+
+.icon-check {
+  color: rgb(76, 76, 255);
+  margin-top: 4px;
+}
+
+.text-light {
+  color: rgb(135, 134, 134);
+}

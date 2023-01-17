@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.edu-org {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-top: 4em;
+}
+
+.vertikal {
+  border-right: 1px solid black;
+  height: 25em;
+  margin-left: 4em;
+}
+
+@media screen and (max-width: 700px) {
+  .vertikal {
+    visibility: hidden;
+    height: 2em;
+  }
+
+  .edu-org {
+    flex-direction: column;
+  }
+}

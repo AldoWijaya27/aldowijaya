@@ -1,0 +1,50 @@
+@media screen and (max-width: 500px) {
+  .porto-title {
+    font-size: 2.5em;
+  }
+  .sertifikat-item {
+    background-color: antiquewhite;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    padding: 5px;
+  }
+
+  .sertifikat-item__title {
+    font-size: 17px;
+  }
+
+  .sertifikat-item__image img {
+    max-width: 300px;
+  }
+  .sertifikat-item__date {
+    color: rgb(141, 140, 140);
+    font-size: 10px;
+  }
+
+  .sertifikat-item__issuer {
+    color: rgb(116, 114, 114);
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .porto-title {
+    font-size: 3em;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .porto-title {
+    font-size: 3em;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .porto-title {
+    font-size: 3.5em;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .porto-title {
+    font-size: 4em;
+  }
+}

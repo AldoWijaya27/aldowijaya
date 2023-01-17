@@ -1,0 +1,75 @@
+.title {
+  text-align: center;
+  font-size: 3em;
+}
+
+.sertifikat-list {
+  gap: 1.5rem;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 5em;
+  margin-top: 2em;
+}
+
+.sertifikat-item {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  background-color: rgb(217, 239, 241);
+  border: 1px solid transparent;
+  border-radius: 0px 0px 20px 20px;
+  padding: 5px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.sertifikat-item__image img {
+  max-width: 400px;
+}
+.sertifikat-item__date {
+  color: rgb(141, 140, 140);
+  font-size: 14px;
+}
+
+.sertifikat-item__issuer {
+  color: rgb(116, 114, 114);
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.sertifikat-item__button {
+  font-size: 15px;
+  border-radius: 12px;
+  padding: 8px;
+  background-color: #647cd8;
+  color: white;
+  cursor: pointer;
+  transition: 0.4s;
+  box-shadow: 3px 3px 0.8px rgba(0, 0, 0, 0.8);
+  margin: auto;
+  display: flex;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.sertifikat-item__button:hover {
+  transform: scale(1.1);
+  background-color: #3c4b85;
+}
+
+@media only screen and (max-width: 1300px) {
+  .sertifikat-item__image img {
+    max-width: 340px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .title {
+    font-size: 2em;
+  }
+}

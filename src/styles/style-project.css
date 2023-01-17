@@ -1,0 +1,250 @@
+.responsive-title {
+  display: none;
+}
+
+.project {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 4em;
+}
+
+.project > h1 {
+  width: 50%;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.project-detail {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30em;
+  gap: 1em;
+}
+
+.project-detail__body {
+  text-align: center;
+  background-color: rgb(201, 201, 250);
+  border-radius: 25px;
+  padding: 9px;
+}
+
+.project-detail__body > h2 {
+  margin-top: 5px;
+}
+
+.button-project {
+  text-decoration: none;
+  border-radius: 8px;
+  padding: 5px;
+  cursor: pointer;
+  margin-top: 7px;
+  margin-bottom: 20px;
+  transition: 0.4s;
+  background-color: #647cd8;
+  color: white;
+  box-shadow: 3px 3px 0.8px rgba(0, 0, 0, 0.8);
+}
+
+.button-project:hover {
+  background-color: #3c4b85;
+  transform: scale(1.1);
+}
+
+.horizontal {
+  width: 30em;
+  margin: auto;
+}
+
+/* left side */
+.w-left {
+  position: relative;
+  width: 50%;
+  margin-bottom: 3em;
+  margin-top: 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.w-mainCircle {
+  position: relative;
+  width: 18rem;
+  height: 18rem;
+  border-radius: 100%;
+  background: rgb(201, 201, 250);
+  z-index: 2;
+  display: flex;
+}
+
+.w-mainCircle > :nth-child(1) {
+  top: -3rem;
+  left: 6rem;
+  background-color: #f2f3fb;
+}
+
+.w-mainCircle > :nth-child(2) {
+  left: -3rem;
+  top: 5rem;
+  background-color: #f2f3fb;
+}
+
+.w-mainCircle > :nth-child(3) {
+  left: 6rem;
+  top: 4rem;
+  background-color: rgb(201, 201, 250);
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 2px;
+}
+
+.w-mainCircle > :nth-child(4) {
+  left: 15rem;
+  top: 5rem;
+  background-color: #f2f3fb;
+}
+.w-mainCircle > :nth-child(5) {
+  left: 6rem;
+  top: 13rem;
+  background-color: #f2f3fb;
+}
+.w-secCircle {
+  width: 7rem;
+  height: 7rem;
+  position: absolute;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: "none";
+  box-shadow: var(--smboxShadow);
+  background: white;
+}
+
+.w-secCircle > .icons {
+  transform: scale(0.8);
+  font-size: 10em;
+  /* color: orange; */
+  color: #647cd8;
+}
+
+.w-backCircle {
+  position: absolute;
+  height: 13rem;
+  width: 13rem;
+  border-radius: 100%;
+  z-index: 1;
+}
+
+@media screen and (max-width: 960px) {
+  .project-detail {
+    width: 35em;
+    margin-top: 18px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .project > h1 {
+    width: 50%;
+    margin-bottom: 20px;
+    margin-top: 0;
+  }
+
+  .project-detail {
+    width: 26em;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .w-mainCircle {
+    width: 16rem;
+    height: 16rem;
+  }
+
+  .w-mainCircle > :nth-child(1) {
+    top: -4rem;
+    left: 4.5rem;
+    background-color: #f2f3fb;
+  }
+
+  .w-mainCircle > :nth-child(2) {
+    left: -4rem;
+    top: 4.5rem;
+    background-color: #f2f3fb;
+  }
+
+  .w-mainCircle > :nth-child(3) {
+    left: 5rem;
+    top: 3.3rem;
+    background-color: rgb(201, 201, 250);
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 2px;
+  }
+
+  .w-mainCircle > :nth-child(4) {
+    left: 13rem;
+    top: 4rem;
+    background-color: #f2f3fb;
+  }
+  .w-mainCircle > :nth-child(5) {
+    left: 4.5rem;
+    top: 13rem;
+    background-color: #f2f3fb;
+  }
+  .w-secCircle {
+    width: 7rem;
+    height: 7rem;
+    position: absolute;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: "none";
+    box-shadow: var(--smboxShadow);
+    background: white;
+  }
+
+  .w-secCircle > .icons {
+    transform: scale(0.8);
+    font-size: 10em;
+    color: #647cd8;
+  }
+
+  .w-backCircle {
+    position: absolute;
+    height: 13rem;
+    width: 13rem;
+    border-radius: 100%;
+    z-index: 1;
+  }
+
+  .project-detail {
+    margin-top: 3.2rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .project-detail {
+    width: 20em;
+    margin-top: -6em;
+  }
+
+  .w-mainCircle {
+    display: none;
+  }
+
+  .responsive-title {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    border: 2px solid rgb(255, 255, 255);
+    margin-bottom: 0;
+  }
+}

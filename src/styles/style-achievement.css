@@ -1,0 +1,50 @@
+.title {
+  font-size: 3em;
+}
+
+.achievement-list__detail {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2.2em;
+  margin-top: 2em;
+}
+
+.achievement {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 17em;
+  height: 12em;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(15px);
+}
+
+.achievement-event {
+  font-size: 14px;
+}
+
+.achievement-issuer {
+  font-size: 13px;
+}
+
+.achievement-date {
+  font-size: 12px;
+  color: grey;
+}
+
+@media screen and (max-width: 500px) {
+  .title {
+    font-size: 2em;
+  }
+}
+@media screen and (max-width: 750px) {
+  .title {
+    font-size: 2.5em;
+  }
+}
