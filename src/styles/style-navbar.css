@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Eczar:wght@700&display=swap");
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0 2rem;
+  background-color: #29335c;
+  color: white;
+}
+
+header h3 {
+  font-size: 40px;
+  font-family: "Eczar", serif;
+  letter-spacing: 3px;
+}
+
+nav {
+  position: absolute;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+nav a {
+  margin: 0 2rem;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  font-weight: bold;
+}
+
+header .nav-btn {
+  padding: 5px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  visibility: hidden;
+  opacity: 0;
+  font-size: 1.5rem;
+  color: white;
+}
+
+@media only screen and (max-width: 1200px) {
+  header h3 {
+    font-size: 40px;
+  }
+
+  header .nav-btn {
+    visibility: visible;
+    opacity: 1;
+    font-size: 35px;
+  }
+
+  header nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    transform: translateY(-100vh);
+    transition: 1s;
+    background-color: #29335c;
+    z-index: 10;
+  }
+
+  header .responsive_nav {
+    transform: none;
+  }
+
+  nav ul li {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  header h3 {
+    font-size: 30px;
+  }
+
+  header .nav-btn {
+    font-size: 25px;
+  }
+}
