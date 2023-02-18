@@ -47,6 +47,7 @@
   margin: 0 0 10px;
   transition: 0.4s ease-in-out;
   color: black;
+  display: flex;
 }
 
 .container .card:hover .imgBox .icon {

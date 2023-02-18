@@ -1,30 +1,32 @@
-import React from "react";
-import Intro from "./Intro";
-import ButtonDownload from "./ButtonDownload";
-import EducationList from "../home/education/EducationList";
-import OrganizationList from "../home/organization/OrganizationList";
-import Skills from "../home/skills/Skills";
-import Project from "../home/project/Project";
-import Experience from "../home/experience/Experience";
-import { getDataEd } from "../dataEd";
-import { getDataOrg } from "../dataOrg";
+import React from 'react';
+import Intro from './Intro';
+import ButtonDownload from './ButtonDownload';
+import EducationList from '../home/education/EducationList';
+import OrganizationList from '../home/organization/OrganizationList';
+import Skills from '../home/skills/Skills';
+import Project from '../home/project/Project';
+import ExperienceList from '../home/experience/ExperienceList';
+import { getDataEd } from '../dataEd';
+import { getDataOrg } from '../dataOrg';
+import { getDataExp } from '../dataExp';
 
 const Home = () => {
   const educations = getDataEd();
   const organizations = getDataOrg();
+  const experiences = getDataExp();
 
   return (
-    <div className="home">
+    <div className='home'>
       <Intro />
       <ButtonDownload />
-      <div className="edu-org">
+      <div className='edu-org'>
         <EducationList educations={educations} />
-        <div className="vertikal"></div>
+        <div className='vertikal'></div>
         <OrganizationList organizations={organizations} />
       </div>
       <Skills />
       <Project />
-      <Experience />
+      <ExperienceList experiences={experiences} />
     </div>
   );
 };

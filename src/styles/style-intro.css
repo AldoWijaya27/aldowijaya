@@ -81,6 +81,13 @@
   .intro-image img {
     width: 8em;
   }
+  .intro-image {
+    width: 13em;
+  }
+
+  .intro-image2 {
+    width: 13em;
+  }
 
   .text1 {
     font-size: 50px;
@@ -95,11 +102,5 @@
     font-size: 15px;
     font-weight: lighter;
     text-align: justify;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .intro-image img {
-    width: 7em;
   }
 }
