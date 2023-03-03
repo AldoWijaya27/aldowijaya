@@ -24,7 +24,7 @@ const Home = () => {
         <div className='vertikal'></div>
         <OrganizationList organizations={organizations} />
       </div>
-      <Skills />
+      <Skills data-aos='fade-up' />
       <Project />
       <ExperienceList experiences={experiences} />
     </div>
