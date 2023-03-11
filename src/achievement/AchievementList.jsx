@@ -1,14 +1,48 @@
-import React from "react";
-import AchievementBody from "./AchievementBody";
-import "../styles/style-achievement.css";
+import React, { useState } from 'react';
+import AchievementBody from './AchievementBody';
+import '../styles/style-achievement.css';
+import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
+import { getDataAch } from '../dataAch';
 
-const AchievementList = ({ achievements }) => {
+const AchievementList = () => {
+  const achievements = getDataAch();
+  const [currentPage, setCurrentPage] = useState(1);
+  const recordsPerPage = 14;
+  const lastIndex = currentPage * recordsPerPage;
+  const firstIndex = lastIndex - recordsPerPage;
+  const records = achievements.slice(firstIndex, lastIndex);
+  const npage = Math.ceil(achievements.length / recordsPerPage);
+
+  const prevPage = () => {
+    if (currentPage !== 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
+
+  const nextPage = () => {
+    if (currentPage !== npage) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+
   return (
-    <div className="achievement-list">
-      <h1 className="title">ACHIEVEMENTS</h1>
-      <div className="achievement-list__detail">
-        {achievements.map((achievement) => (
-          <AchievementBody key={AchievementBody.id} {...achievement} />
+    <div className='achievement-list'>
+      <h1 className='title'>ACHIEVEMENTS</h1>
+      <div className='pagination'>
+        <a href='#' onClick={prevPage}>
+          <IoIosArrowBack />
+        </a>
+        <p>
+          {currentPage} / {npage}
+        </p>
+        <a href='#' onClick={nextPage}>
+          <IoIosArrowForward />
+        </a>
+      </div>
+
+      <div className='achievement-list__detail'>
+        {records.map((achievement, id) => (
+          <AchievementBody key={id} {...achievement} />
         ))}
       </div>
     </div>

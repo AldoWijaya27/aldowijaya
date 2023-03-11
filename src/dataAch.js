@@ -1,6 +1,34 @@
 const getDataAch = () => {
   return [
     {
+      id: 26,
+      name: 'Silver Medal',
+      event: 'Indonesian Olympiad (English)',
+      issuer: 'PT. Digital Edu Indonesia',
+      date: 'March 2023',
+    },
+    {
+      id: 25,
+      name: 'Silver Medal',
+      event: 'Indonesian Olympiad (Biology)',
+      issuer: 'PT. Digital Edu Indonesia',
+      date: 'March 2023',
+    },
+    {
+      id: 24,
+      name: 'Silver Medal',
+      event: 'Indonesian Olympiad (Economy)',
+      issuer: 'PT. Digital Edu Indonesia',
+      date: 'March 2023',
+    },
+    {
+      id: 23,
+      name: 'Bronze Medal',
+      event: 'Indonesian Olympiad (Mathematics)',
+      issuer: 'PT. Digital Edu Indonesia',
+      date: 'March 2023',
+    },
+    {
       id: 22,
       name: 'The Best Graduate',
       event: 'Studi Independen 3',

@@ -1,5 +1,24 @@
 .title {
-  font-size: 3em;
+  font-size: 3.5em;
+}
+
+.pagination {
+  display: flex;
+  gap: 8px;
+  font-size: 20px;
+  justify-content: center;
+}
+
+.pagination a {
+  border: 1px solid black;
+  color: black;
+  border-radius: 5px;
+  transition: ease-in-out 0.2s;
+}
+
+.pagination a:hover {
+  background-color: blue;
+  color: white;
 }
 
 .achievement-list__detail {
@@ -9,7 +28,7 @@
   justify-content: center;
   align-items: center;
   gap: 2.2em;
-  margin-top: 2em;
+  margin-top: 1em;
 }
 
 .achievement {
@@ -43,6 +62,7 @@
     font-size: 2em;
   }
 }
+
 @media screen and (max-width: 750px) {
   .title {
     font-size: 2.5em;
