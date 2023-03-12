@@ -7,6 +7,7 @@ import { getDataAch } from '../dataAch';
 const AchievementList = () => {
   const achievements = getDataAch();
   const [currentPage, setCurrentPage] = useState(1);
+  const [query, setQuery] = useState('');
   const recordsPerPage = 14;
   const lastIndex = currentPage * recordsPerPage;
   const firstIndex = lastIndex - recordsPerPage;
@@ -28,6 +29,14 @@ const AchievementList = () => {
   return (
     <div className='achievement-list'>
       <h1 className='title'>ACHIEVEMENTS</h1>
+      <div className='search'>
+        <input
+          className='search-box'
+          type='text'
+          placeholder='Search '
+          onChange={(e) => setQuery(e.target.value)}
+        />
+      </div>
       <div className='pagination'>
         <a href='#' onClick={prevPage}>
           <IoIosArrowBack />
@@ -39,11 +48,19 @@ const AchievementList = () => {
           <IoIosArrowForward />
         </a>
       </div>
-
       <div className='achievement-list__detail'>
-        {records.map((achievement, id) => (
-          <AchievementBody key={id} {...achievement} />
-        ))}
+        {records
+          .filter((achievement) => {
+            return (
+              achievement.name.toLowerCase().includes(query) ||
+              achievement.event.toLowerCase().includes(query) ||
+              achievement.date.toLowerCase().includes(query) ||
+              achievement.issuer.toLowerCase().includes(query)
+            );
+          })
+          .map((achievement, id) => (
+            <AchievementBody key={id} {...achievement} />
+          ))}
       </div>
     </div>
   );

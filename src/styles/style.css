@@ -2,12 +2,16 @@
   margin: 0;
 }
 
+.main-page {
+  min-height: 75vh;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .edu-org {

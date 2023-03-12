@@ -2,6 +2,18 @@
   font-size: 3.5em;
 }
 
+.search {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+
+.search-box {
+  border-radius: 4px;
+  padding: 10px;
+  width: 20%;
+}
+
 .pagination {
   display: flex;
   gap: 8px;
