@@ -26,6 +26,10 @@ const AchievementList = () => {
     }
   };
 
+  const filteredAchievements = records.filter((achievement) => {
+    return achievement.name.toLowerCase().includes(query) || achievement.event.toLowerCase().includes(query) || achievement.date.toLowerCase().includes(query) || achievement.issuer.toLowerCase().includes(query);
+  });
+
   return (
     <div className="achievement-list">
       <h1 className="title">ACHIEVEMENTS</h1>
@@ -46,13 +50,14 @@ const AchievementList = () => {
         </div>
       </div>
       <div className="achievement-list__detail">
-        {records
-          .filter((achievement) => {
-            return achievement.name.toLowerCase().includes(query) || achievement.event.toLowerCase().includes(query) || achievement.date.toLowerCase().includes(query) || achievement.issuer.toLowerCase().includes(query);
-          })
-          .map((achievement, id) => (
-            <AchievementBody key={id} {...achievement} />
-          ))}
+        {filteredAchievements.length > 0 ? (
+          filteredAchievements.map((achievement, id) => <AchievementBody key={id} {...achievement} />)
+        ) : (
+          <div className="not-found-box">
+            <p className="not-found-text">Not Found</p>
+            <p>Data tidak ditemukan.</p>
+          </div>
+        )}
       </div>
     </div>
   );
