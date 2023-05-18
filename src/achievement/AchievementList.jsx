@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import AchievementBody from "./AchievementBody";
 import "../styles/style-achievement.css";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
@@ -9,9 +9,6 @@ const AchievementList = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [query, setQuery] = useState("");
   const recordsPerPage = 14;
-  const lastIndex = currentPage * recordsPerPage;
-  const firstIndex = lastIndex - recordsPerPage;
-  const records = achievements.slice(firstIndex, lastIndex);
   const npage = Math.ceil(achievements.length / recordsPerPage);
 
   const prevPage = () => {
@@ -26,9 +23,13 @@ const AchievementList = () => {
     }
   };
 
-  const filteredAchievements = records.filter((achievement) => {
+  const filteredAchievements = achievements.filter((achievement) => {
     return achievement.name.toLowerCase().includes(query) || achievement.event.toLowerCase().includes(query) || achievement.date.toLowerCase().includes(query) || achievement.issuer.toLowerCase().includes(query);
   });
+
+  const lastIndex = currentPage * recordsPerPage;
+  const firstIndex = lastIndex - recordsPerPage;
+  const records = filteredAchievements.slice(firstIndex, lastIndex);
 
   return (
     <div className="achievement-list">
@@ -50,8 +51,8 @@ const AchievementList = () => {
         </div>
       </div>
       <div className="achievement-list__detail">
-        {filteredAchievements.length > 0 ? (
-          filteredAchievements.map((achievement, id) => <AchievementBody key={id} {...achievement} />)
+        {records.length > 0 ? (
+          records.map((achievement, id) => <AchievementBody key={id} {...achievement} />)
         ) : (
           <div className="not-found-box">
             <p className="not-found-text">Not Found</p>
