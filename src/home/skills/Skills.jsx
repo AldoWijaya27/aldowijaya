@@ -1,10 +1,11 @@
 import React from "react";
 import "../../styles/style-skill.css";
 import { BsFillPatchCheckFill } from "react-icons/bs";
+import "aos/dist/aos.css";
 
 const Skills = () => {
   return (
-    <div className="div">
+    <div className="div" data-aos="zoom-in">
       <h1>Skills</h1>
       <div className="skills-wrapper">
         <article className="skills-detail">

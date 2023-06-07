@@ -4,7 +4,7 @@ import "../styles/style-buttonDownload.css";
 
 const ButtonDownload = () => {
   return (
-    <div className="button-wrapper">
+    <div className="button-wrapper" data-aos="zoom-in">
       <a href={Resume} download>
         <button className="button s-button">Resume</button>
       </a>

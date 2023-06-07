@@ -5,7 +5,7 @@ const getDataEd = () => {
       schoolName: "Universitas Lampung",
       study: "Informatics engineering",
       time: "Sep 2020 - present",
-      grade: "Grade: 3.90 / 4.00",
+      grade: "Grade: 3.91 / 4.00",
     },
     {
       id: 2,
